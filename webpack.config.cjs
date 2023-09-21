@@ -3,7 +3,7 @@ module.exports = {
   mode: 'development',
   entry: './index.html',
   output: {
-    filename: 'bundle.js',
+    filename: 'index.css',
     path: path.resolve(__dirname, 'dist')
   },
   module: {
