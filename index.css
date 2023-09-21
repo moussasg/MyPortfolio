@@ -74,6 +74,7 @@ section.sectionskills {
 }
 section.websites {
 width: 100%;
+height: 100%;
 }
 section.sectionacompli {
   margin-left: 30vw;
@@ -214,7 +215,8 @@ footer.cert {
 }
   .sectionacompli .coverweb img  {
     max-width: 100%; /* Make the images responsive */
-    height: auto; /* Maintain aspect ratio */
+    height: 200px; /* Maintain aspect ratio */
+    width: 300px;
     display: flex;
   }
   .sectionacompli .coverweb h2  {
