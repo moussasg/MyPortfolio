@@ -72,11 +72,13 @@ section.sectionskills {
   font-size: 2rem;
   margin-bottom: var(--spacing);
 }
+section.websites {
+width: 100%;
+}
 section.sectionacompli {
   margin-left: 30vw;
-  grid-column:  1/ 7; /* 6/12 = a droite  */
+  grid-column:  1/ 9; /* 6/12 = a droite  */
   background: var(--dark-bg);
-  border: 3px solid gray;
   font-size: 2rem;
   margin-bottom: var(--spacing);
 }
@@ -197,6 +199,18 @@ footer.cert {
   display: flex;
   width: 100%;
   justify-content: center;
+}
+.acomp {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+.coverweb {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  height: 100%;
 }
   .sectionacompli .coverweb img  {
     max-width: 100%; /* Make the images responsive */
