@@ -3,7 +3,7 @@
 //pour création d'animations et de rendus 3D dans les navigateurs web.
 import './index.css' 
 import * as THREE from 'three' // we have 3 Setups in THREE.js :  1)scene + 2)camera + 3)'render' le scence+camera)
-import {OrbitControls} from "three/examples/jsm/controls/OrbitControls" // function pour tourner objet en 3d
+import {OrbitControls} from "three/examples/jsm/controls/OrbitControls.js" // function pour tourner objet en 3d
 // Setup : we put scence+camera inside render
 const scene = new THREE.Scene() // 1)Scene = container  / S majuscule Scene : we put inside renderer
 const camera = new THREE.PerspectiveCamera(75 ,window.innerWidth/window.innerHeight , 0.1 ,1000) // we put inside render + OrbitControls pour activé mode OrbitControls 3d 
