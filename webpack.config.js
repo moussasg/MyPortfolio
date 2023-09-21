@@ -2,7 +2,7 @@ const path = require('path');
 // webpack : web bundling tool that efficiently combines and processes various source files like JavaScript, CSS, and images
 module.exports = {
   mode: 'development',
-  entry: '/public/index.html',
+  entry: './public/index.html',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
@@ -31,7 +31,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'OrbitControls': path.resolve(__dirname, 'chemin/vers/OrbitControls.js')
+      'OrbitControls': path.resolve(__dirname, './main.js')
     }
   }
 };
