@@ -1,9 +1,10 @@
 const path = require('path');
+// webpack : web bundling tool that efficiently combines and processes various source files like JavaScript, CSS, and images
 module.exports = {
   mode: 'development',
   entry: './index.html',
   output: {
-    filename: 'index.css',
+    filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
   module: {
