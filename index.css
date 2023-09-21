@@ -216,7 +216,7 @@ blockquote {
 blockquote p {
   color: black;
   background-color: white;
-  font-size: 4rem;
+  font-size: 5rem;
   display: inline;
   line-height: 1;
 }
@@ -296,11 +296,17 @@ nav {
 }
 div#tag {
   position: relative;
-  left:60%;
+  left:65%;
   top: 5%;
 }
 img#mygreet {
   background-size: auto;
+}
+.bloc p {
+  font-size: 3rem;
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 @media screen and (min-width: 100px) and (max-width: 1000px) {
   .sectionacompli h1,h4 {
@@ -311,6 +317,17 @@ img#mygreet {
     position: relative;
     left: -45%;
     top:65%;
+  }
+}
+@media screen and (min-width: 100px) and (max-width: 400px) {
+  div#tag {
+    position: relative;
+    left: -80%;
+    top:65%;
+  }
+  blockquote.bloc {
+    margin-left: 10vw;
+
   }
 }
 /* Media Query pour les écrans de petite taille */
@@ -333,8 +350,10 @@ img#mygreet {
     font-size: 1rem; /* Adjust font size as needed */
   }
   .bloc p {
-    font-size: 1.3rem;
-    max-width: 100%;
+    position: relative;
+    font-size: 0.8rem;
+    width: 60%;
+    margin-left: -24vw;
   }
   header {
     flex-direction: column; /* Passer à une disposition verticale pour les petits écrans */
@@ -345,7 +364,16 @@ img#mygreet {
     padding: 0;
   }
   blockquote p {
-    font-size: 1rem;
-    white-space: nowrap;
+    color: black;
+    background-color: white;
+    margin-left:-13vw;
+    white-space: wrap;
+    width: 0;
   } 
+}
+@media screen and (max-width:1000px) {
+  blockquote.bloc {
+    position: relative;
+    top: 20vh;
+  }
 }
