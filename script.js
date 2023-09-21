@@ -111,7 +111,6 @@ THE SOFTWARE.
             if(svg){
                 element.removeChild( svg );
                 svg.removeEventListener( 'mousemove', mouseMoveHandler );
-                delete svg;
             }
         }
 
