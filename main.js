@@ -2,6 +2,7 @@
 //library JavaScript appelée "Three.js".  bibliothèque js
 //pour création d'animations et de rendus 3D dans les navigateurs web.
 import './index.css' 
+import './index.html'
 import * as THREE from 'three' // we have 3 Setups in THREE.js :  1)scene + 2)camera + 3)'render' le scence+camera)
 import {OrbitControls} from "three/examples/jsm/controls/OrbitControls" // function pour tourner objet en 3d
 // Setup : we put scence+camera inside render
