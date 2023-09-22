@@ -9,17 +9,17 @@ body {
   padding: 0;
   margin: 0;
 }
-#bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  max-width: 100%;
-  min-height: 100%; /*very important for display 100% background.*/
-  touch-action: none; /*(comme le toucher de l'écran avec un doigt).*/
-  }
 .widthimg {
   width:400px;
 }
+#bg {
+  position: fixed;
+  top: 0;
+  display: none; /* Cela masquera le canvas */
+  left: 0;
+  max-width: 100%;
+  min-height: 100%; /*very important for display 100% background.*/
+  }
 /*for animation*/
 .sectionskills {
   opacity: 0;
@@ -42,6 +42,7 @@ width: 90%;
   transition:  all 1s;
 }
 .bloc {
+  text-align: center;
   white-space: nowrap; /* Empêche le texte de sauter à la ligne */
   opacity: 0;
   filter: blur(3px); /*portrait*/
@@ -72,13 +73,8 @@ section.sectionskills {
   font-size: 2rem;
   margin-bottom: var(--spacing);
 }
-section.websites {
-width: 100%;
-height: 100%;
-}
 section.sectionacompli {
   border: 3px solid gray;
-
   margin-left: 30vw;
   grid-column:  1/ 9; /* 6/12 = a droite  */
   background: var(--dark-bg);
@@ -92,7 +88,7 @@ section.sectionacompli {
   overflow: hidden; /* Ajout de l'overflow caché */
 }
 main {
-width: 90%;
+width: 100%;
 color: white;
 z-index: 99;
 position: absolute;
@@ -204,16 +200,20 @@ footer.cert {
   justify-content: center;
 }
 .acomp {
+  height: auto;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   height: 100%;
 }
 .coverweb {
+  height: 1000px;
+  justify-content: center;
+  align-items: center;
+  gap:15px;
   display: flex;
   width: 100%;
   flex-wrap: wrap;
-  height: 100%;
 }
   .sectionacompli .coverweb img  {
     max-width: 100%; /* Make the images responsive */
@@ -226,6 +226,7 @@ footer.cert {
     height: auto; /* Maintain aspect ratio */
   }
 blockquote {
+  position: relative;
   margin: 0;
   padding: 0;
   grid-column: 2 / span 8;
@@ -278,13 +279,20 @@ blockquote .footer {
   grid-column: 2 / 7; /*ybda f 2 ykhlass f 6*/
 }
 }
+@media screen and (min-width:300px) and (max-width:600px) {
+  .bloc p {
+    position: relative;
+    display: flex;
+    justify-content: left;
+    bottom: 30vh;
+    font-size: 0.8rem;
+    width: 40%;
+  }
+}
 @media screen and (min-width:100px) and (max-width:800px) {
   #animation {
     width: 100px; /* Remplacez 300px par la valeur de largeur souhaitée */
   }
-  canvas#bg {
-  width: 100vw;
-}
   img#mygreet {
     height: 80%;
   }
@@ -326,7 +334,22 @@ img#mygreet {
   width: 100%;
   justify-content: center;
 }
+.conteneur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%; /*very important for display 100% background.*/
+}
+.conteneur video {
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%; /*very important for display 100% background.*/
+}
 @media screen and (min-width: 100px) and (max-width: 1000px) {
+  canvas#bg {
+    width: 100vw;
+  }
   .sectionacompli h1,h4 {
     font-size: 0.9rem;
     overflow: hidden; /* Ajout de l'overflow caché */
@@ -334,18 +357,23 @@ img#mygreet {
   div#tag {
     position: relative;
     left: -40%;
-    top:65%;
+    top:14%;
   }
 }
+div.edcplusthanks {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap:-50px;
+}
+blockquote.bloc {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 @media screen and (min-width: 100px) and (max-width: 700px) {
-  div#tag {
-    position: relative;
-    left: -68%;
-    top:65%;
-  }
   blockquote.bloc {
-    margin-left: 10vw;
-
+    margin-left: -10vw;
   }
 }
 /* Media Query pour les écrans de petite taille */
@@ -357,13 +385,15 @@ img#mygreet {
     display: none;
   }
   section.sectionacompli {
+    width: 260px;
     position: relative;
     grid-column: 1/8;
-    top:40vh;
+    top:-15vh;
     margin-left: 10vw;
   }
   section.sectionskills {
     width: 300px;
+    bottom: 70vh;
   }
   .sectionskills h3,h5,h2  {
     font-size: 1rem;
@@ -373,9 +403,10 @@ img#mygreet {
   }
   .bloc p {
     position: relative;
+    bottom: 30vh;
     font-size: 0.8rem;
     width: 40%;
-    margin-left: -24vw;
+    margin-left: -45vw;
   }
   header {
     flex-direction: column; /* Passer à une disposition verticale pour les petits écrans */
@@ -389,13 +420,7 @@ img#mygreet {
     color: black;
     background-color: white;
     margin-left:-13vw;
-    white-space: wrap;
     width: 0;
   } 
 }
-@media screen and (max-width:1000px) {
-  blockquote.bloc {
-    position: relative;
-    top: 20vh;
-  }
-}
+

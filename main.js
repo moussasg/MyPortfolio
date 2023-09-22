@@ -68,10 +68,6 @@ const observer = new IntersectionObserver((entr)=> {
         }
     })
 }) 
-/// hidden in css with opacity 0
-const hidenelement = document.querySelectorAll('.hidden') // select all hidden class in header in index.html
-// Commence l'observation
-hidenelement.forEach((el)=>observer.observe(el)) // observe all hiddenelement
 /// to animation 
 const sectionacomp = document.querySelectorAll('.sectionacompli')
 sectionacomp.forEach((xi)=>observer.observe(xi))
@@ -109,7 +105,3 @@ refdip.scrollIntoView({ behavior: 'smooth' })
 })
 })
   
-
-
-
-
