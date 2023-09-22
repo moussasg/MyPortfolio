@@ -340,7 +340,7 @@ img#mygreet {
 @media screen and (min-width: 100px) and (max-width: 500px) {
   div#tag {
     position: relative;
-    left: -62%;
+    left: -68%;
     top:65%;
   }
   blockquote.bloc {
@@ -351,7 +351,7 @@ img#mygreet {
 /* Media Query pour les écrans de petite taille */
 @media screen and (max-width: 1000px) {
   section.present {
-    grid-column: 2/10;
+    grid-column: 1/10;
   }
   .myqr {
     display: none;
@@ -374,7 +374,7 @@ img#mygreet {
   .bloc p {
     position: relative;
     font-size: 0.8rem;
-    width: 60%;
+    width: 40%;
     margin-left: -24vw;
   }
   header {
