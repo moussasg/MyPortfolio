@@ -5,6 +5,7 @@ html {
   padding: 0;
 }
 body {
+  overflow-x: hidden;
   width: 100%;
   padding: 0;
   margin: 0;
@@ -356,7 +357,7 @@ img#mygreet {
   }
   div#tag {
     position: relative;
-    left: -40%;
+    left: -56%;
     top:14%;
   }
 }
@@ -379,7 +380,7 @@ blockquote.bloc {
 /* Media Query pour les écrans de petite taille */
 @media screen and (max-width: 1000px) {
   section.present {
-    grid-column: 1/10;
+    grid-column: 1/7;
   }
   .myqr {
     display: none;
@@ -388,7 +389,8 @@ blockquote.bloc {
     width: 260px;
     position: relative;
     grid-column: 1/8;
-    top:-15vh;
+    top:-30vh;
+    height: 90%;
     margin-left: 10vw;
   }
   section.sectionskills {
@@ -405,8 +407,8 @@ blockquote.bloc {
     position: relative;
     bottom: 30vh;
     font-size: 0.8rem;
-    width: 40%;
-    margin-left: -45vw;
+    width: 100%;
+    margin-left: -136vw;
   }
   header {
     flex-direction: column; /* Passer à une disposition verticale pour les petits écrans */
