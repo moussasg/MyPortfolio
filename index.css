@@ -65,7 +65,7 @@ font-style: normal;
 }
 section.sectionskills {
   position: relative;
-  grid-column: 1 / 7; /* 6/12 = a droite  */
+  grid-column: 1 / 8; /* 6/12 = a droite  */
   background: var(--dark-bg);
   border: 3px solid gray;
   margin-left: 5vw;
@@ -77,6 +77,8 @@ width: 100%;
 height: 100%;
 }
 section.sectionacompli {
+  border: 3px solid gray;
+
   margin-left: 30vw;
   grid-column:  1/ 9; /* 6/12 = a droite  */
   background: var(--dark-bg);
@@ -331,14 +333,14 @@ img#mygreet {
   }
   div#tag {
     position: relative;
-    left: -45%;
+    left: -40%;
     top:65%;
   }
 }
-@media screen and (min-width: 100px) and (max-width: 400px) {
+@media screen and (min-width: 100px) and (max-width: 500px) {
   div#tag {
     position: relative;
-    left: -80%;
+    left: -62%;
     top:65%;
   }
   blockquote.bloc {
@@ -348,16 +350,20 @@ img#mygreet {
 }
 /* Media Query pour les écrans de petite taille */
 @media screen and (max-width: 1000px) {
+  section.present {
+    grid-column: 2/10;
+  }
   .myqr {
     display: none;
   }
   section.sectionacompli {
     position: relative;
-    grid-column: 1/6;
-    top:30vh;
+    grid-column: 1/8;
+    top:40vh;
+    margin-left: 10vw;
   }
   section.sectionskills {
-    width: 200px;
+    width: 300px;
   }
   .sectionskills h3,h5,h2  {
     font-size: 1rem;
