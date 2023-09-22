@@ -357,7 +357,7 @@ img#mygreet {
   }
   div#tag {
     position: relative;
-    left: -56%;
+    left: -100vw;
     top:14%;
   }
 }
@@ -391,10 +391,11 @@ blockquote.bloc {
     grid-column: 1/8;
     top:-30vh;
     height: 90%;
-    margin-left: 10vw;
+    margin-left: 0vw;
   }
   section.sectionskills {
     width: 300px;
+    margin-left: 1vw;
     bottom: 70vh;
   }
   .sectionskills h3,h5,h2  {
@@ -406,9 +407,9 @@ blockquote.bloc {
   .bloc p {
     position: relative;
     bottom: 30vh;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     width: 100%;
-    margin-left: -136vw;
+    margin-left: -120vw;
   }
   header {
     flex-direction: column; /* Passer à une disposition verticale pour les petits écrans */
