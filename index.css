@@ -75,6 +75,7 @@ section.sectionskills {
   margin-bottom: var(--spacing);
 }
 section.sectionacompli {
+  height: 92%;
   border: 3px solid gray;
   margin-left: 30vw;
   grid-column:  1/ 9; /* 6/12 = a droite  */
@@ -119,9 +120,15 @@ padding: 0;
 word-wrap: break-word;
   }
   nav#myacomp , nav#myeduc , nav#myskils  , nav#myacomp , nav#mydownload  {
+    color: white;
+    transition: background-color 0.3s; /* Animation de transition pour le fond */
     width: 50px;
     display: flex;
     justify-content: center;
+    border-radius: 10px; /* Ajustez la valeur selon vos préférences */
+  }
+  nav:hover {
+    transform: scale(1.1); /* Ajustez la valeur pour l'effet de survol souhaité */
   }
   header {
     width: 100%;
@@ -221,6 +228,12 @@ footer.cert {
     height: 200px; /* Maintain aspect ratio */
     width: 300px;
     display: flex;
+    opacity: 0.7; /* Rend l'assombrissement opaque au survol */
+  }
+  .coverweb img:hover  {
+    transform: scale(1.1); /* Ajustez la valeur pour l'effet de survol souhaité */
+    opacity: 100; /* Rend l'assombrissement opaque au survol */
+    transition: filter 0.3s; /* Transition pour l'effet de survol */
   }
   .sectionacompli .coverweb h2  {
     max-width: 100%; /* Make the images responsive */
@@ -281,6 +294,11 @@ blockquote .footer {
 }
 }
 @media screen and (min-width:100px) and (max-width:600px) {
+  section.dernierediv {
+    margin-top: -10vh;
+    align-items: flex-start;
+    margin-left: -120vw;
+  }
   .bloc p {
     display: flex;
     justify-content: center;
@@ -325,6 +343,12 @@ div#tag {
   position: relative;
   left:65%;
   top: 5%;
+}
+.myqrunder {
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media screen and (min-width:100px) and (max-width:500px) {
   section.sectionacompli {
@@ -425,6 +449,7 @@ blockquote.bloc {
   }
   header {
     flex-direction: column; /* Passer à une disposition verticale pour les petits écrans */
+    align-items: center;
     max-width: 40vh;
   }
   .mypresent h1,p  {

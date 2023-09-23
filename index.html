@@ -44,7 +44,7 @@
       <P>As a Full-Stack Developper <br> With almost 2 years of experience</P>
       </div>
       <div class="myqr">
-      <img src="/myphotos.png" width="200px" height="200px">
+      <img src="/myqr.png" width="200px" height="200px">
       <h1> Scan Me ! </h1>
       </div>
     </section>
@@ -52,7 +52,6 @@
       <p>I like making stuff and putting it on the WEB</p>
     </blockquote>
     <section class="sectionskills">
-    <p id="goskils"></p>
     <h2 style="text-align: left" class="scrolskills">🤹 SKILLS SUMMARY 🤹 </h2>
     <br>
     <h3>
@@ -76,6 +75,7 @@
      Security of websites, Testing, and Debugging
     </h5>
   </section>
+  <p id="goskils"></p>
   <div id="tag"></div>
   <div class="animation">
   <script>
@@ -86,19 +86,19 @@
               {label : 'HTML'},
               {label : 'CSS'},
               {label : 'JavaScript'},
-              {label : 'React'},
+              {label : 'React.Js'},
               {label : 'Material Ui/Radix'},
-              {label : 'Redux'},
+              {label : 'Redux.Js'},
               {label : 'Node.Js'},
               {label : 'Express.Js'},
               {label : 'MongoDb'},
               {label : 'UI/UX'},
-              {label : 'Three.Js'},
+              {label : 'Three.js'},
               {label : 'Api /Rest Api'},
               {label : 'Web Security'},
+              {label : 'deployment'},
               {label : 'Canva'},
               {label : 'Figma'},
-
           ]
           var setting = {
               entries:entries,
@@ -119,6 +119,14 @@ freezeActive: true,
 fontToUpparcase:true,
 }
 $('#tag').svg3DTagCloud(setting);
+$('#tag').on('click', 'a', function(event) {
+        event.preventDefault(); // Empêche le comportement par défaut du lien
+        
+        var mot = $(this).text(); // Récupère le texte du mot cliqué
+
+        // Redirige vers la page Wikipedia correspondante
+        window.open('https://www.google.com/search?q=' + mot, '_blank');
+})
       })
   </script>
   </div>
@@ -166,16 +174,20 @@ $('#tag').svg3DTagCloud(setting);
         <h4>🔴 Gomycode Certification Multinational</h4>
         <h4> Full Stack JavaScript Certification(graduation project) 
           </h4>
-    </section>
+          <div class="myqrunder">
+            <img src="/myqr.png" width="250px" height="250px">
+          </div>
+          <h3 style="text-align: center;">Scan Me ! </h3>
+        </section>
     <br>
         <blockquote class="bloc">
         <p>Thanks for watching !</p>
       </blockquote>
-      <div class='dernierediv'>
+      <section class='dernierediv'>
         <div><a href='https://www.linkedin.com/in/moussa-souag-2892781b5'><img src="/in.png" height='40' width='40'  alt='ff'></img></a></div>
         <div><a href='https://github.com/moussasg/myproject'><img src="/github.png" height='40' width='40'  alt='ff'></img></a></div>
         <div class="mousg"><p> <div>© 2023 <br> Moussa</div> <div class="mousg"></div> </div>
-        </div> 
+      </section> 
   </main>
 </body>
 </html>
