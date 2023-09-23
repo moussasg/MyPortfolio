@@ -257,6 +257,11 @@ blockquote p {
   grid-column: 6 / 12;
   border: 3px solid gray;
 }
+.fotrgap {
+  height: 100%;
+  display: flex;
+  gap: 20px;
+}
 section.dernierediv {
   display: flex;
   width: 10%;
@@ -360,6 +365,14 @@ div#tag {
 }
 }
 @media screen and (min-width:500px) and (max-width:1000px) {
+  .fotrgap {
+    margin-bottom: 30vh;
+  } 
+ 
+  section.dernierediv {
+    position: relative;
+    margin-left: -48vw;
+  }
   div#tag {
     position: relative;
     left:-50vh
