@@ -280,14 +280,14 @@ blockquote .footer {
   grid-column: 2 / 7; /*ybda f 2 ykhlass f 6*/
 }
 }
-@media screen and (min-width:300px) and (max-width:600px) {
+@media screen and (min-width:100px) and (max-width:600px) {
   .bloc p {
-    position: relative;
     display: flex;
-    justify-content: left;
+    justify-content: center;
     bottom: 30vh;
-    font-size: 0.8rem;
-    width: 40%;
+    font-size: 0.7rem;
+    width: auto;
+    margin-left: -60%;
   }
 }
 @media screen and (min-width:100px) and (max-width:800px) {
@@ -326,13 +326,28 @@ div#tag {
   left:65%;
   top: 5%;
 }
+@media screen and (min-width:100px) and (max-width:500px) {
+  section.sectionacompli {
+    margin-left: -1vw;
+  }
+  div#tag {
+    position: relative;
+    left:-44vh
+}
+}
+@media screen and (min-width:500px) and (max-width:1000px) {
+  div#tag {
+    position: relative;
+    left:-50vh
+}
+}
 img#mygreet {
   background-size: auto;
 }
 .bloc p {
   font-size: 3rem;
   display: flex;
-  width: 100%;
+  min-width: 100%;
   justify-content: center;
 }
 .conteneur {
@@ -347,6 +362,7 @@ img#mygreet {
   min-width: 100%;
   min-height: 100%; /*very important for display 100% background.*/
 }
+
 @media screen and (min-width: 100px) and (max-width: 1000px) {
   canvas#bg {
     width: 100vw;
@@ -354,11 +370,6 @@ img#mygreet {
   .sectionacompli h1,h4 {
     font-size: 0.9rem;
     overflow: hidden; /* Ajout de l'overflow caché */
-  }
-  div#tag {
-    position: relative;
-    left: -100vw;
-    top:14%;
   }
 }
 div.edcplusthanks {
@@ -390,26 +401,27 @@ blockquote.bloc {
     position: relative;
     grid-column: 1/8;
     top:-30vh;
-    height: 90%;
-    margin-left: 0vw;
+    height: 92%;
+    margin-left: 6vw;
   }
   section.sectionskills {
-    width: 300px;
-    margin-left: 1vw;
+    width: 240px;
     bottom: 70vh;
   }
   .sectionskills h3,h5,h2  {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .sectionacompli h2 {
-    font-size: 1rem; /* Adjust font size as needed */
+    font-size: 0.9rem; /* Adjust font size as needed */
   }
   .bloc p {
     position: relative;
-    bottom: 30vh;
-    font-size: 0.7rem;
+    display: flex;
+    justify-content: center;
     width: 100%;
-    margin-left: -120vw;
+    bottom: 30vh;
+    font-size: 0.6rem;
+    width: 100%;
   }
   header {
     flex-direction: column; /* Passer à une disposition verticale pour les petits écrans */
@@ -426,4 +438,3 @@ blockquote.bloc {
     width: 0;
   } 
 }
-
