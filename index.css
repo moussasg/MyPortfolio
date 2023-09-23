@@ -179,7 +179,15 @@ section.present {
   margin-top: -2vh;
   grid-column: 2 / 7; /*ybda f 2 ykhlass f 6*/
   margin-bottom: var(--spacing);
-  }
+  transform-style: preserve-3d;
+  animation: slide 2s infinite alternate;
+  opacity: 0.9;
+  transition: opacity 0.5s; /* Ajout de l'effet de transition */
+}
+section.present:hover {
+  transform: scale(1.1); /* Ajustez la valeur pour l'effet de survol souhaité */
+  opacity: 10;
+}
 /* Appliquer un style à l'image */
 
 #textcert {
@@ -245,6 +253,14 @@ blockquote {
   padding: 0;
   grid-column: 2 / span 8;
   margin-bottom: var(--spacing);
+}
+@keyframes rotateAnimation {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(120deg);
+  }
 }
 blockquote p {
   color: black;
@@ -419,6 +435,12 @@ blockquote.bloc {
   width: 100%;
   display: flex;
   justify-content: center;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  transition: transform 0.5s; /* Ajout de l'effet de transition */
+}
+blockquote.bloc:hover {
+  transform: perspective(500px) rotateX(55deg); /* Transformation 3D au survol */
 }
 @media screen and (min-width: 100px) and (max-width: 700px) {
   blockquote.bloc {
